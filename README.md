@@ -1,5 +1,7 @@
 # 👷‍♂️ NFTank
 
+![NFTank](https://user-images.githubusercontent.com/76690419/168440752-a3249cbd-d3b2-4c3b-b635-acd57ff55b9c.png)
+
 🚀 A command-line tool to mint NFTs for testing your smart contracts!
 
 # Usage
