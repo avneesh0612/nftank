@@ -6,6 +6,7 @@ import inquirer from "inquirer";
 import mintErc721Nft from "../../lib/mintErc721Nft";
 
 import { erc721 as questions } from "../../data/questions";
+import { networks } from "../../data/options";
 
 export default class Erc721 extends Command {
   static description = "✨ Mint a ERC721 NFT at a given address";
@@ -43,7 +44,7 @@ export default class Erc721 extends Command {
 
     if (!flags.interactive) {
       if (!(flags.address && flags.network)) {
-        console.error(
+        return console.error(
           chalk.red(
             "[❌] Address and Network are required when not using interactive mode"
           )
@@ -51,8 +52,14 @@ export default class Erc721 extends Command {
       }
     }
 
+    if (!networks.includes(flags.network as string)) {
+      return console.error(
+        chalk.red(`[❌] Network ${flags.network} is not supported.`)
+      );
+    }
+
     if (flags.image && !isImage(flags.image)) {
-      console.error(chalk.red("[⚠️] The given image path is invalid"));
+      return console.error(chalk.red("[⚠️] The given image path is invalid"));
     }
 
     if (flags.interactive) {
