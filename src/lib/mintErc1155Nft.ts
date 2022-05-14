@@ -16,9 +16,10 @@ import { API_URL as apiUrl } from "../constants/constants";
  * @param image [Optional] The image of the NFT
  * @param title [Optional] The title of the NFT
  * @param description [Optional] The description of the NFT
+ * @param amount [Optional] Amount of ERC1155 NFTs to mint
  */
 
-const mintErc721Nft = async (
+const mintErc1155Nft = async (
   address: string,
   network: string,
   image: string,
@@ -36,15 +37,16 @@ const mintErc721Nft = async (
     });
   }
 
-  const spinner = ora(`[✨] Minting a ERC721 NFT on ${network}...`).start();
+  const spinner = ora(`[✨] Minting a ERC1155 NFT on ${network}...`).start();
 
   await axios
-    .post(`${apiUrl}/erc721/mint`, {
+    .post(`${apiUrl}/erc1155/mint`, {
       address: address,
       network: networksShortHandNaming.get(network),
       image: image,
       name: title,
       description: description,
+      amount: amount,
     })
     .then((res) => {
       if (res.status === 200) {
@@ -67,4 +69,4 @@ const mintErc721Nft = async (
     });
 };
 
-export default mintErc721Nft;
+export default mintErc1155Nft;

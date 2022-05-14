@@ -50,12 +50,11 @@ export default class Erc721 extends Command {
           )
         );
       }
-    }
-
-    if (!networks.includes(flags.network as string)) {
-      return console.error(
-        chalk.red(`[❌] Network ${flags.network} is not supported.`)
-      );
+      if (!networks.includes(flags.network as string)) {
+        return console.error(
+          chalk.red(`[❌] Network ${flags.network} is not supported.`)
+        );
+      }
     }
 
     if (flags.image && !isImage(flags.image)) {
