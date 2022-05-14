@@ -20,8 +20,8 @@ USAGE
 
 - [`nftank docs`](#nftank-docs)
 - [`nftank help [COMMAND]`](#nftank-help-command)
-- [`nftank mint erc1155`](#nftank-mint-erc1155)
-- [`nftank mint erc721`](#nftank-mint-erc721)
+- [`nftank mint:erc1155`](#nftank-mint-erc1155)
+- [`nftank mint:erc721`](#nftank-mint-erc721)
 
 ## `nftank docs`
 
@@ -56,7 +56,7 @@ DESCRIPTION
   Display help for nftank.
 ```
 
-## `nftank mint erc1155`
+## `nftank mint:erc1155`
 
 ✨ Mint a ERC1155 NFT at a given address
 
@@ -77,16 +77,16 @@ DESCRIPTION
   ✨ Mint a ERC1155 NFT at a given address
 
 EXAMPLES
-  $ nftank mint --address=0xd24CA0297558f0827e2C467603869D1AC9fF435d --network=mumbai
+  $ nftank mint:erc1155 --address=0xd24CA0297558f0827e2C467603869D1AC9fF435d --network=mumbai
 ```
 
-## `nftank mint erc721`
+## `nftank mint:erc721`
 
 ✨ Mint a ERC721 NFT at a given address
 
 ```
 USAGE
-  $ nftank mint erc721 -I [-a <value>] [-n <value>] [-i <value>] [-t <value>] [-d <value>]
+  $ nftank mint:erc721 -I [-a <value>] [-n <value>] [-i <value>] [-t <value>] [-d <value>]
 
 FLAGS
   -I, --[no-]interactive     (required)
