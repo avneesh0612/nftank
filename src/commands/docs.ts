@@ -2,15 +2,15 @@ import { Command, Flags } from "@oclif/core";
 import chalk from "chalk";
 
 export default class Docs extends Command {
-  static description = "✨ Check how to mint a NFT using NFTank";
+  static description = "✨ Check how to mint an NFT using NFTank";
 
   static examples = ["$ nftank mint"];
 
   async run() {
     console.log(`
-${chalk.bold.green("How to mint a NFT using NFTank?")}
+${chalk.bold.green("How to mint an NFT using NFTank?")}
 
-Minting a NFT at a specific address is so simple that even your grandpa can do it.
+Minting an NFT to a specific address made super easy and quick.
 
 - Run the ${chalk.bold.blue(
       "nftank mint:erc721"

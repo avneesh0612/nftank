@@ -21,14 +21,14 @@ USAGE
 - [`nftank mint erc1155`](#nftank-mint-erc1155)
 - [`nftank mint erc721`](#nftank-mint-erc721)
 
-✨ Check how to mint a NFT using NFTank
+✨ Check how to mint an NFT using NFTank
 
-```
+```bash
 USAGE
   $ nftank docs
 
 DESCRIPTION
-  ✨ Check how to mint a NFT using NFTank
+  ✨ Check how to mint an NFT using NFTank
 
 EXAMPLES
   $ nftank mint
@@ -54,7 +54,7 @@ DESCRIPTION
 
 ## `nftank mint:erc1155`
 
-✨ Mint a ERC1155 NFT at a given address
+✨ Mint an NFT to the given address
 
 ```
 USAGE
@@ -70,7 +70,7 @@ FLAGS
   -t, --title=<value>
 
 DESCRIPTION
-  ✨ Mint a ERC1155 NFT at a given address
+  ✨ Mint an NFT to the given address
 
 EXAMPLES
   $ nftank mint:erc1155 --address=0xd24CA0297558f0827e2C467603869D1AC9fF435d --network=mumbai

@@ -1,6 +1,6 @@
 {
   "name": "nftank",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "🚀 A command-line tool to mint NFTs to test your smart contracts ",
   "author": "Kira272921",
   "bin": {
@@ -34,6 +34,7 @@
     "@types/node": "^16.11.35",
     "globby": "^11",
     "oclif": "^3",
+    "prettier": "^2.6.2",
     "shx": "^0.3.4",
     "ts-node": "^10.7.0",
     "tslib": "^2.4.0",
@@ -49,7 +50,7 @@
     ],
     "topics": {
       "mint": {
-        "description": "✨ Mint a NFT at a given address"
+        "description": "✨ Mint an NFT to a given address"
       }
     }
   },
@@ -60,7 +61,8 @@
     "posttest": "yarn lint",
     "prepack": "yarn build && oclif manifest",
     "test": "mocha --forbid-only \"test/**/*.test.ts\"",
-    "version": "oclif readme && git add README.md"
+    "version": "oclif readme && git add README.md",
+    "format": "prettier --write ."
   },
   "engines": {
     "node": ">=12.0.0"

@@ -37,7 +37,7 @@ const mintErc1155Nft = async (
     const ipfsSpinner = ora(`[🚀] Uploading the image...`).start();
 
     const imageBase64 = await convertImageToBase64(image);
-    await uploadImage(imageBase64).then(async (link) => {
+    await uploadImage(imageBase64).then(async link => {
       image = link;
       ipfsSpinner.succeed(`[🚀] Uploaded the image`);
     });
@@ -54,7 +54,7 @@ const mintErc1155Nft = async (
       description: description,
       amount: Number(amount),
     })
-    .then((res) => {
+    .then(res => {
       if (res.status === 200) {
         console.log(chalk.green(`\n[✅] NFT minted successfully.`));
         console.log(
@@ -68,7 +68,7 @@ const mintErc1155Nft = async (
         spinner.fail("[❌] An error occurred while minting the NFT");
       }
     })
-    .catch((err) => {
+    .catch(err => {
       console.log(chalk.red(`\n[⚠️] Error: ${err}`));
 
       spinner.fail("[❌] An error occurred while minting the NFT");

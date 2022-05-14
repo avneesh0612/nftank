@@ -7,10 +7,10 @@ const uploadImage = async (base64: string) => {
     .post(`${apiUrl}/image/upload`, {
       image: base64,
     })
-    .then((response) => {
+    .then(response => {
       return response.data.url;
     })
-    .catch((error) => {
+    .catch(error => {
       throw new Error(error);
     });
 

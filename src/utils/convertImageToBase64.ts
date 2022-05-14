@@ -8,10 +8,10 @@ import imageToBase64 from "image-to-base64";
 
 const convertImageToBase64 = (image: string) => {
   const base64 = imageToBase64(image)
-    .then((base64) => {
+    .then(base64 => {
       return base64;
     })
-    .catch((error) => {
+    .catch(error => {
       throw new Error(error);
     });
 
