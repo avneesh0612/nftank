@@ -5,7 +5,7 @@ import ora from "ora";
 import convertImageToBase64 from "../utils/convertImageToBase64";
 import uploadImage from "../utils/uploadImage";
 
-import { networksShortHandNaming } from "../data/options";
+import { networksShortHandNaming, networksFlags } from "../data/options";
 
 import { API_URL as apiUrl } from "../constants/constants";
 
@@ -40,7 +40,9 @@ const mintErc721Nft = async (
   await axios
     .post(`${apiUrl}/erc721/mint`, {
       address: address,
-      network: networksShortHandNaming.get(network),
+      network: networksShortHandNaming.get(network)
+        ? networksShortHandNaming.get(network)
+        : network,
       image: image,
       name: title,
       description: description,
@@ -49,7 +51,7 @@ const mintErc721Nft = async (
       if (res.status === 200) {
         console.log(chalk.green(`\n[✅] NFT minted successfully.`));
         console.log(
-          chalk.green(`\n[👀] Check it out at ${res.data.openseaLink}`)
+          chalk.green(`[👀] Check it out at ${res.data.openseaLink}`)
         );
 
         spinner.succeed(`[✨] Successfully minted a ERC721 NFT on ${network}`);
@@ -60,7 +62,7 @@ const mintErc721Nft = async (
       }
     })
     .catch((err) => {
-      console.log(chalk.red(`\n[⚠️] Error: ${err}`));
+      console.log(chalk.red(`\n[⚠️] Error: ${err.message}`));
 
       spinner.fail("[❌] An error occurred while minting the NFT");
     });

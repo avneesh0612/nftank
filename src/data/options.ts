@@ -5,4 +5,6 @@ const networksShortHandNaming = new Map([
   ["Rinkeby", "rinkeby"],
 ]);
 
-export { networks, networksShortHandNaming };
+const networksFlags = ["mumbai", "rinkeby"];
+
+export { networks, networksShortHandNaming, networksFlags };

@@ -3,16 +3,16 @@ import isImage from "is-image";
 import chalk from "chalk";
 import inquirer from "inquirer";
 
-import mintErc721Nft from "../../lib/mintErc721Nft";
+import mintErc1155Nft from "../../lib/mintErc1155Nft";
 
-import { erc721 as questions } from "../../data/questions";
-import { networksFlags } from "../../data/options";
+import { erc1155 as questions } from "../../data/questions";
+import { networks } from "../../data/options";
 
-export default class Erc721 extends Command {
-  static description = "✨ Mint a ERC721 NFT at a given address";
+export default class Erc1155 extends Command {
+  static description = "✨ Mint a ERC1155 NFT at a given address";
 
   static examples = [
-    "nftank mint:erc721 --address=0xd24CA0297558f0827e2C467603869D1AC9fF435d --network=mumbai",
+    "nftank mint --address=0xd24CA0297558f0827e2C467603869D1AC9fF435d --network=mumbai",
   ];
 
   static flags = {
@@ -31,6 +31,9 @@ export default class Erc721 extends Command {
     description: Flags.string({
       char: "d",
     }),
+    amount: Flags.integer({
+      char: "q",
+    }),
     interactive: Flags.boolean({
       char: "I",
       allowNo: true,
@@ -40,7 +43,7 @@ export default class Erc721 extends Command {
   };
 
   async run() {
-    const { flags } = await this.parse(Erc721);
+    const { flags } = await this.parse(Erc1155);
 
     if (!flags.interactive) {
       if (!(flags.address && flags.network)) {
@@ -50,7 +53,7 @@ export default class Erc721 extends Command {
           )
         );
       }
-      if (!networksFlags.includes(flags.network as string)) {
+      if (!networks.includes(flags.network as string)) {
         return console.error(
           chalk.red(`[❌] Network ${flags.network} is not supported.`)
         );
@@ -65,22 +68,25 @@ export default class Erc721 extends Command {
       inquirer.registerPrompt("search-list", require("inquirer-search-list"));
 
       inquirer.prompt(questions).then(async (answers) => {
-        mintErc721Nft(
+        console.log(answers.amount);
+
+        mintErc1155Nft(
           answers.address,
           answers.network,
           answers.image,
           answers.title,
-          answers.description
+          answers.description,
+          answers.amount
         );
       });
     } else {
-      console.log(flags);
-      mintErc721Nft(
+      mintErc1155Nft(
         flags.address as string,
         flags.network as string,
         flags.image as string,
         flags.title as string,
-        flags.description as string
+        flags.description as string,
+        flags.amount as number
       );
     }
   }

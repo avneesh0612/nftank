@@ -25,8 +25,14 @@ const mintErc1155Nft = async (
   image: string,
   title: string,
   description: string,
-  amount: string
+  amount: number
 ) => {
+  if (typeof amount === "number" && amount > 100000) {
+    return console.error(
+      chalk.red("[❌] The limit is 100000 for ERC1155 NFTs")
+    );
+  }
+
   if (image !== null && typeof image === "string") {
     const ipfsSpinner = ora(`[🚀] Uploading the image...`).start();
 
@@ -46,13 +52,13 @@ const mintErc1155Nft = async (
       image: image,
       name: title,
       description: description,
-      amount: amount,
+      amount: Number(amount),
     })
     .then((res) => {
       if (res.status === 200) {
         console.log(chalk.green(`\n[✅] NFT minted successfully.`));
         console.log(
-          chalk.green(`\n[👀] Check it out at ${res.data.openseaLink}`)
+          chalk.green(`[👀] Check it out at ${res.data.openseaLink}`)
         );
 
         spinner.succeed(`[✨] Successfully minted a ERC721 NFT on ${network}`);
