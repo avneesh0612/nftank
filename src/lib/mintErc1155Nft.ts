@@ -61,7 +61,7 @@ const mintErc1155Nft = async (
           chalk.green(`[👀] Check it out at ${res.data.openseaLink}`)
         );
 
-        spinner.succeed(`[✨] Successfully minted a ERC 1555 token on ${network}`);
+        spinner.succeed(`[✨] Successfully minted an ERC 1555 token on ${network}`);
       } else {
         console.log(chalk.red(`\n[⚠️] Error: ${res.data}`));
 
