@@ -16,14 +16,10 @@ USAGE
 
 # Commands
 
-<!-- commands -->
-
 - [`nftank docs`](#nftank-docs)
 - [`nftank help [COMMAND]`](#nftank-help-command)
-- [`nftank mint:erc1155`](#nftank-mint-erc1155)
-- [`nftank mint:erc721`](#nftank-mint-erc721)
-
-## `nftank docs`
+- [`nftank mint erc1155`](#nftank-mint-erc1155)
+- [`nftank mint erc721`](#nftank-mint-erc721)
 
 ✨ Check how to mint a NFT using NFTank
 
@@ -62,7 +58,7 @@ DESCRIPTION
 
 ```
 USAGE
-  $ nftank mint erc1155 -I [-a <value>] [-n <value>] [-i <value>] [-t <value>] [-d <value>] [-q <value>]
+  $ nftank mint:erc1155 -I [-a <value>] [-n <value>] [-i <value>] [-t <value>] [-d <value>] [-q <value>]
 
 FLAGS
   -I, --[no-]interactive     (required)
