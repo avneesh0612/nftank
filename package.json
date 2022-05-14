@@ -1,6 +1,6 @@
 {
   "name": "nftank",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "🚀 A command-line tool to mint NFTs to test your smart contracts ",
   "author": "Kira272921",
   "bin": {
@@ -54,7 +54,7 @@
     "lint": "eslint . --ext .ts --config .eslintrc",
     "postpack": "shx rm -f oclif.manifest.json",
     "posttest": "yarn lint",
-    "prepack": "yarn build && oclif manifest && oclif readme",
+    "prepack": "yarn build && oclif manifest",
     "test": "mocha --forbid-only \"test/**/*.test.ts\"",
     "version": "oclif readme && git add README.md"
   },
