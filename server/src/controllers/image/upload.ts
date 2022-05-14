@@ -24,7 +24,9 @@ const upload = async (req: Request, res: Response) => {
       message: "[✅] Image uploaded successfully",
       url: (await response).data.data.url,
     });
-  } catch {
+  } catch (err) {
+    console.log(err);
+
     return res.status(500).json({
       message: "[❌] An error occurred while uploading the image",
     });
