@@ -10,6 +10,6 @@
     "target": "es2019",
     "esModuleInterop": true
   },
-  "include": ["src/**/*"],
-  "exclude": ["src/server"]
+  "include": ["src/**/*", "server"],
+  "exclude": ["server"]
 }
