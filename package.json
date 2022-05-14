@@ -35,7 +35,7 @@
     "@types/image-to-base64": "^2.1.0",
     "@types/inquirer": "^8.2.1",
     "@types/mocha": "^9.0.0",
-    "@types/node": "^16.9.4",
+    "@types/node": "^16.11.35",
     "chai": "^4",
     "eslint": "^7.32.0",
     "eslint-config-oclif": "^4",
