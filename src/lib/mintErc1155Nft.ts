@@ -3,14 +3,14 @@ import chalk from "chalk";
 import ora from "ora";
 
 import convertImageToBase64 from "../utils/convertImageToBase64";
-import uploadToIpfs from "../utils/uploadToIpfs";
+import uploadImage from "../utils/uploadImage";
 
 import { networksShortHandNaming } from "../data/options";
 
 import { API_URL as apiUrl } from "../constants/constants";
 
 /**
- * @description Mint a NFT at a given address on a given network
+ * @description Mint a ERC1155 NFT at a given address on a given network
  * @param address The address where the NFT should be minted
  * @param network The network on which the NFT should be minted
  * @param image [Optional] The image of the NFT
@@ -28,12 +28,12 @@ const mintErc1155Nft = async (
   amount: string
 ) => {
   if (image !== null && typeof image === "string") {
-    const ipfsSpinner = ora(`[🚀] Uploading the image to IPFS`).start();
+    const ipfsSpinner = ora(`[🚀] Uploading the image...`).start();
 
     const imageBase64 = await convertImageToBase64(image);
-    await uploadToIpfs(imageBase64).then(async (cid) => {
-      image = `ipfs://${cid}`;
-      ipfsSpinner.succeed(`[🚀] Uploaded the image to IPFS`);
+    await uploadImage(imageBase64).then(async (link) => {
+      image = link;
+      ipfsSpinner.succeed(`[🚀] Uploaded the image`);
     });
   }
 
