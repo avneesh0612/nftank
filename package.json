@@ -47,7 +47,11 @@
       "@oclif/plugin-help",
       "@oclif/plugin-plugins"
     ],
-    "topicSeparator": " "
+    "topics": {
+      "mint": {
+        "description": "✨ Mint a NFT at a given address"
+      }
+    }
   },
   "scripts": {
     "build": "shx rm -rf dist && tsc -b",

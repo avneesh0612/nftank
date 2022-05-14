@@ -68,8 +68,6 @@ export default class Erc1155 extends Command {
       inquirer.registerPrompt("search-list", require("inquirer-search-list"));
 
       inquirer.prompt(questions).then(async (answers) => {
-        console.log(answers.amount);
-
         mintErc1155Nft(
           answers.address,
           answers.network,
