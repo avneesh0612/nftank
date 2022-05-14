@@ -1,6 +1,6 @@
 {
   "name": "nftank",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "🚀 A command-line tool to mint NFTs to test your smart contracts ",
   "author": "Kira272921",
   "bin": {
