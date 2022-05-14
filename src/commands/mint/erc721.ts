@@ -65,6 +65,8 @@ export default class Erc721 extends Command {
       inquirer.registerPrompt("search-list", require("inquirer-search-list"));
 
       inquirer.prompt(questions).then(async (answers) => {
+        console.log(answers);
+
         mintErc721Nft(
           answers.address,
           answers.network,
@@ -74,7 +76,6 @@ export default class Erc721 extends Command {
         );
       });
     } else {
-      console.log(flags);
       mintErc721Nft(
         flags.address as string,
         flags.network as string,

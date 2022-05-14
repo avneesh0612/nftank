@@ -25,7 +25,7 @@ const mintErc721Nft = async (
   title: string,
   description: string
 ) => {
-  if (image !== null && typeof image === "string") {
+  if (image !== "" && typeof image === "string") {
     const ipfsSpinner = ora(`[🚀] Uploading the image...`).start();
 
     const imageBase64 = await convertImageToBase64(image);

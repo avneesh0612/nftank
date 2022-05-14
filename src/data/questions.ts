@@ -25,9 +25,9 @@ const erc721 = [
     type: "input",
     name: "image",
     message: "Enter the image path/link of the NFT:",
-    default: null,
+    default: "",
     validate: (value: string) => {
-      if (value === null) {
+      if (value === "") {
         return true;
       } else {
         if (isImage(value)) {
@@ -41,13 +41,13 @@ const erc721 = [
     type: "input",
     name: "title",
     message: "Enter the title of the NFT:",
-    default: null,
+    default: "",
   },
   {
     type: "input",
     name: "description",
     message: "Enter the description of the NFT:",
-    default: null,
+    default: "",
   },
 ];
 
@@ -75,9 +75,9 @@ const erc1155 = [
     type: "input",
     name: "image",
     message: "Enter the image path/link of the NFT:",
-    default: null,
+    default: "",
     validate: (value: string) => {
-      if (value === null) {
+      if (value === "") {
         return true;
       } else {
         if (isImage(value)) {
@@ -91,13 +91,13 @@ const erc1155 = [
     type: "input",
     name: "title",
     message: "Enter the title of the NFT:",
-    default: null,
+    default: "",
   },
   {
     type: "input",
     name: "description",
     message: "Enter the description of the NFT:",
-    default: null,
+    default: "",
   },
   {
     type: "input",
