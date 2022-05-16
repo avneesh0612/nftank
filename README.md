@@ -2,7 +2,7 @@
 
 ![NFTank](https://user-images.githubusercontent.com/76690419/168440752-a3249cbd-d3b2-4c3b-b635-acd57ff55b9c.png)
 
-<a href="https://www.producthunt.com/posts/nftank?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-nftank" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=346389&theme=dark" alt="NFTank - Mint&#0032;NFTs&#0032;to&#0032;an&#0032;address&#0032;within&#0032;a&#0032;snap | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a> <a href="https://www.producthunt.com/posts/nftank?utm_source=badge-top-post-badge&utm_medium=badge&utm_souce=badge-nftank" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=346389&theme=dark&period=daily" alt="NFTank - Mint&#0032;NFTs&#0032;to&#0032;an&#0032;address&#0032;within&#0032;a&#0032;snap | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+<a href="https://www.producthunt.com/posts/nftank?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-nftank" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=346389&theme=dark" alt="NFTank - Mint&#0032;NFTs&#0032;to&#0032;an&#0032;address&#0032;within&#0032;a&#0032;snap | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a> 
 
 🚀 NFTank (NFT tank for dummies) will allow developers to quickly request NFTs to personal wallets or smart contracts in just a few clicks.
 
