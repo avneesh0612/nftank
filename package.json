@@ -32,7 +32,7 @@
     "@types/image-to-base64": "2.1.0",
     "@types/inquirer": "8.2.1",
     "@types/node": "16.11.35",
-    "globby": "11.1.0",
+    "globby": "13.1.1",
     "oclif": "3.0.1",
     "prettier": "2.6.2",
     "shx": "0.3.4",
