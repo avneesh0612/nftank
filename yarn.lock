@@ -223,10 +223,10 @@
     supports-color "^8.1.1"
     tslib "^2"
 
-"@oclif/core@1.8.2":
-  version "1.8.2"
-  resolved "https://registry.yarnpkg.com/@oclif/core/-/core-1.8.2.tgz#a29bce3e555614be7a17962dd4743d8da21d6b27"
-  integrity sha512-0fP+mY/APCRoVuaf4YqOlSar6xe5rsnKq1oApoknMVDE4jCTN/eVqOkE5/lGOEcS+EB2MNM+HFz/8lcR6+gY3Q==
+"@oclif/core@1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@oclif/core/-/core-1.9.0.tgz#bb2a7820a9176f28921f449c0f577d39c15e74d0"
+  integrity sha512-duvlaRQf4JM+mKuwwos1DNa/Q9x6tnF3khV5RU0fy5hhETF7THlTmxioKlIvKMyQDVpySqtZXZ0OKHeCi2EWuQ==
   dependencies:
     "@oclif/linewrap" "^1.0.0"
     "@oclif/screen" "^3.0.2"
@@ -245,7 +245,6 @@
     indent-string "^4.0.0"
     is-wsl "^2.2.0"
     js-yaml "^3.14.1"
-    lodash "^4.17.21"
     natural-orderby "^2.0.3"
     object-treeify "^1.1.33"
     password-prompt "^1.1.2"
