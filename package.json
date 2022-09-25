@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@types/image-to-base64": "2.1.0",
-    "@types/inquirer": "8.2.1",
+    "@types/inquirer": "8.2.3",
     "@types/node": "16.11.38",
     "globby": "13.1.1",
     "oclif": "3.0.1",
