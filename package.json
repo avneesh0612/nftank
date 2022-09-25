@@ -23,14 +23,14 @@
     "axios": "^0.27.2",
     "chalk": "5.0.1",
     "image-to-base64": "^2.2.0",
-    "inquirer": "^8.2.4",
+    "inquirer": "^9.0.0",
     "inquirer-search-list": "^1.2.6",
     "is-image": "^3.0.0",
     "ora": "6.1.0"
   },
   "devDependencies": {
     "@types/image-to-base64": "2.1.0",
-    "@types/inquirer": "8.2.1",
+    "@types/inquirer": "9.0.1",
     "@types/node": "16.11.38",
     "globby": "13.1.1",
     "oclif": "3.0.1",
