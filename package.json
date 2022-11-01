@@ -23,7 +23,7 @@
     "axios": "^0.27.2",
     "chalk": "5.0.1",
     "image-to-base64": "^2.2.0",
-    "inquirer": "^8.2.4",
+    "inquirer": "^8.2.5",
     "inquirer-search-list": "^1.2.6",
     "is-image": "^3.0.0",
     "ora": "6.1.0"
