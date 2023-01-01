@@ -21,7 +21,7 @@
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-plugins": "^2.1.0",
     "axios": "^0.27.2",
-    "chalk": "5.0.1",
+    "chalk": "5.2.0",
     "image-to-base64": "^2.2.0",
     "inquirer": "^8.2.4",
     "inquirer-search-list": "^1.2.6",
